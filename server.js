@@ -28,6 +28,10 @@ app.post('/paint', (req, res) => {
 	res.json(req.body);
 });
 
+app.get('/health', (req, res) => {
+	res.json({"status": "UP"});
+});
+
 app.listen(port, () => {
 	console.log(`Server started on port ${port}`);
 });
